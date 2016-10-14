@@ -4,15 +4,26 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 H:\Krankenbescheinigung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\
+=======
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\
+>>>>>>> 6e023c111970ea73b21de597b1df93751da14611
 Krankenmeldung
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 H:\Krankenbescheinigung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\App.xaml
 3102648787
 
 17-1234094336
+=======
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\App.xaml
+11151548125
+
+13236900003
+>>>>>>> 6e023c111970ea73b21de597b1df93751da14611
 12-1401562060
 Krankenmelden.xaml;LoginGUI.xaml;MainWindow.xaml;
 

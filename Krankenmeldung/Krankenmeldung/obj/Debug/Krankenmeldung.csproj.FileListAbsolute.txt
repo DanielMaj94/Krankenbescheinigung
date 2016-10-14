@@ -1,4 +1,5 @@
 H:\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\bin\Debug\Krankenmeldung.exe.config
+<<<<<<< HEAD
 H:\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\Krankenmeldung.csprojResolveAssemblyReference.cache
 H:\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\LoginGUI.baml
 H:\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\MainWindow.baml
@@ -32,3 +33,14 @@ H:\Krankenbescheinigung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\D
 H:\Krankenbescheinigung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\Krankenmeldung.csproj.GenerateResource.Cache
 H:\Krankenbescheinigung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\bin\Debug\Krankenmeldung.exe
 H:\Krankenbescheinigung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\bin\Debug\Krankenmeldung.pdb
+=======
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\bin\Debug\Krankenmeldung.exe.config
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\Krankenmeldung.csprojResolveAssemblyReference.cache
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\MainWindow.baml
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\MainWindow.g.cs
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\App.g.cs
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\Krankenmeldung_MarkupCompile.cache
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\Krankenmeldung.g.resources
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\Krankenmeldung.Properties.Resources.resources
+H:\Krankmeldung\Krankenbescheinigung\Krankenmeldung\Krankenmeldung\obj\Debug\Krankenmeldung.csproj.GenerateResource.Cache
+>>>>>>> 6e023c111970ea73b21de597b1df93751da14611
