@@ -18,7 +18,6 @@ namespace Krankenmeldung
         string firma;
         string email;
         string klasse;
-        string status = "Anwesend";
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -110,16 +109,6 @@ namespace Krankenmeldung
             {
                 klasse = value;
                 NotifyPropertyChanged("klasse");
-            }
-        }
-
-        public string Status
-        {
-            get { return status; }
-            set
-            {
-                status = value;
-                NotifyPropertyChanged("Status");
             }
         }
 

@@ -3,7 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Krankenmelden" Height="300" Width="300">
     <Grid>
-        <ComboBox Name="cbKlasse" HorizontalAlignment="Left" Margin="22,22,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=AlleKlassen}" SelectionChanged="cbKlasse_SelectionChanged"/>
-        <ComboBox x:Name="cbSchueler" HorizontalAlignment="Left" Margin="22,61,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=listeSchueler}" SelectionChanged="cbKlasse_SelectionChanged"/>
+        <ComboBox Name="cbKlasse" HorizontalAlignment="Left" Margin="151,22,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=AlleKlassen}" SelectionChanged="cbKlasse_SelectionChanged"/>
+        <ComboBox x:Name="cbSchueler" HorizontalAlignment="Left" Margin="151,61,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=listeSchueler}" SelectionChanged="cbKlasse_SelectionChanged"/>
+        <DatePicker HorizontalAlignment="Left" Margin="151,99,0,0" VerticalAlignment="Top"/>
+        <Label Content="Klasse:" HorizontalAlignment="Left" Margin="19,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Schüler:" HorizontalAlignment="Left" Margin="19,59,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum:" HorizontalAlignment="Left" Margin="19,98,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="tbuhrzeitVon" HorizontalAlignment="Left" Height="23" Margin="151,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbuhrzeitBis" HorizontalAlignment="Left" Height="23" Margin="152,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Uhrzeit Bis:" HorizontalAlignment="Left" Margin="19,179,0,0" VerticalAlignment="Top"/>
+        <Label Content="Uhrzeit Von:" HorizontalAlignment="Left" Margin="19,142,0,0" VerticalAlignment="Top"/>
+        <Button Content="Krankmelden
+                " HorizontalAlignment="Left" Margin="19,243,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <ComboBox x:Name="cbStatus" HorizontalAlignment="Left" Margin="151,216,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding AlleStatus}" SelectionChanged="cbKlasse_SelectionChanged"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="19,214,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

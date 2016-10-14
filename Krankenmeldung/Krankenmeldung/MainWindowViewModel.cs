@@ -15,6 +15,7 @@ namespace Krankenmeldung
         public List<Lehrer> AlleLehrer = new List<Lehrer>();
         public List<Klasse> AlleKlassen = new List<Klasse>();
         public List<Schueler> AlleSchueler = new List<Schueler>();
+        public List<KrankerSchueler> AlleKrankenSchueler = new List<KrankerSchueler>();
 
         public List<Klasse> alleKlassen
         {

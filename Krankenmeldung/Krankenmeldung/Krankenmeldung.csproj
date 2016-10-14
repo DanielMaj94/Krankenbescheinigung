@@ -57,6 +57,7 @@
     <Compile Include="Krankenmelden.xaml.cs">
       <DependentUpon>Krankenmelden.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KrankerSchueler.cs" />
     <Compile Include="Lehrer.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="LoginGUI.xaml.cs">

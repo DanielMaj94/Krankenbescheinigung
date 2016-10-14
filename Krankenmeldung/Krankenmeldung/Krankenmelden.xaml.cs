@@ -22,6 +22,7 @@ namespace Krankenmeldung
     {
         List<string> AlleKlassen = new List<string>();
         List<string> listeSchueler = new List<string>();
+        List<string> listeStatus = new List<string>();
         MainWindowViewModel meinViewModel;
 
         public Krankenmelden(MainWindowViewModel ViewModel)
@@ -35,12 +36,19 @@ namespace Krankenmeldung
                 AlleKlassen.Add(k.Bezeichnung);
             }
 
+            listeStatus.Add("Unentschuldigt Abwesend");
+            listeStatus.Add("Entschuldigt Abwesend");
+            listeStatus.Add("Beurlaubt");
+            listeStatus.Add("Sonstiges");
+
             cbKlasse.ItemsSource = AlleKlassen;
+            cbStatus.ItemsSource = listeStatus;
         }
 
         private void cbKlasse_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            cbSchueler.ClearValue();
+            listeSchueler.Clear();
+
             //MessageBox.Show(""+cbKlasse.SelectedValue);
             foreach(Schueler s in meinViewModel.AlleSchueler)
             {
@@ -52,6 +60,11 @@ namespace Krankenmeldung
             }
 
             cbSchueler.ItemsSource = listeSchueler;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         
