@@ -20,9 +20,18 @@ namespace Krankenmeldung
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        MainWindowViewModel meinViewModel;
+
+        public MainWindow(MainWindowViewModel ViewModel)
         {
             InitializeComponent();
+            meinViewModel = ViewModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Krankenmelden melden = new Krankenmelden(meinViewModel);
+            melden.Show();
         }
     }
 }

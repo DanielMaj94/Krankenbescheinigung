@@ -32,8 +32,9 @@ namespace Krankmeldung
             }
         }
 
-        public Dokument(string _beschreibung)
+        public Dokument(string _pfad, string _beschreibung)
         {
+            this.pfad = _pfad;
             this.beschreibung = _beschreibung;
         }
 

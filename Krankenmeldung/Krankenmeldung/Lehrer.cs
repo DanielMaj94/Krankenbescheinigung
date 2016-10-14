@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Krankenmeldung : INotifyPropertyChanged
+namespace Krankenmeldung
 {
-    class Lehrer
+    public class Lehrer : INotifyPropertyChanged
     {
+        string kuerzel;
         string name;
         string vorname;
         string benutzername;
@@ -17,6 +18,16 @@ namespace Krankenmeldung : INotifyPropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+
+        public string Kuerzel
+        {
+            get { return kuerzel; }
+            set
+            {
+                kuerzel = value;
+                NotifyPropertyChanged("Kuerzel");
+            }
+        }
 
         public string Name
         {
@@ -68,8 +79,9 @@ namespace Krankenmeldung : INotifyPropertyChanged
             }
         }
 
-        public Lehrer(string _name, string _vorname, string _benutzername, string _passwort)
+        public Lehrer(string _kuerzel, string _name, string _vorname, string _benutzername, string _passwort)
         {
+            this.kuerzel = _kuerzel;
             this.name = _name;
             this.vorname = _vorname;
             this.benutzername = _benutzername;

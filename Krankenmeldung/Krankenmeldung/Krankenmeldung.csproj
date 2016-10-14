@@ -53,8 +53,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dokument.cs" />
+    <Compile Include="Krankenmelden.xaml.cs">
+      <DependentUpon>Krankenmelden.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Lehrer.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginGUI.xaml.cs">
+      <DependentUpon>LoginGUI.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Schueler.cs" />
+    <Page Include="Krankenmelden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginGUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

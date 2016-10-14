@@ -3,13 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="238" Margin="31,46,0,0" VerticalAlignment="Top" Width="457">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="26*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="lstData" ItemsSource="{Binding}"  IsEnabled="true" Background="White" Margin="51,37,59,66" Grid.ColumnSpan="2">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="Auto" DisplayMemberBinding="{Binding Path=Name}" />
+                        <GridViewColumn Header="Vorname" Width="Auto" DisplayMemberBinding="{Binding Path=Vorname}" />
+                        <GridViewColumn Header="Status" Width="Auto" DisplayMemberBinding="{Binding Path=Status}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Grid.ColumnSpan="2" Content="Benutzer krankmelden" HorizontalAlignment="Left" Margin="51,274,0,0" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.04,0.05" Click="Button_Click"/>
+        </Grid>
 
     </Grid>
 </Window>

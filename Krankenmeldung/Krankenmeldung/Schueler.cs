@@ -17,6 +17,7 @@ namespace Krankenmeldung
         string ort;
         string firma;
         string email;
+        string klasse;
         string status = "Anwesend";
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -102,6 +103,16 @@ namespace Krankenmeldung
             }
         }
 
+        public string Klasse
+        {
+            get { return klasse; }
+            set
+            {
+                klasse = value;
+                NotifyPropertyChanged("klasse");
+            }
+        }
+
         public string Status
         {
             get { return status; }
@@ -112,7 +123,7 @@ namespace Krankenmeldung
             }
         }
 
-        public Schueler(string _name, string _vorname, int _alter, string _strasse, string _plz, string _ort, string _firma, string _email/*, string _status*/)
+        public Schueler(string _name, string _vorname, int _alter, string _strasse, string _plz, string _ort, string _firma, string _email, string _klasse/*, string _status*/)
         {
             this.name = _name;
             this.vorname = _vorname;
@@ -122,6 +133,7 @@ namespace Krankenmeldung
             this.ort = _ort;
             this.firma = _firma;
             this.email = _email;
+            this.klasse = _klasse;
             //this.status = _status;
         }
 
