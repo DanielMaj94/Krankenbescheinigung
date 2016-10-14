@@ -40,10 +40,12 @@ namespace Krankenmeldung
 
         private void cbKlasse_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            cbSchueler.ClearValue();
             //MessageBox.Show(""+cbKlasse.SelectedValue);
             foreach(Schueler s in meinViewModel.AlleSchueler)
             {
-                if(s.Klasse.Equals(""+cbSchueler.SelectedValue))
+                //MessageBox.Show(s.Klasse + " " /*cbSchueler.SelectedValue*/);
+                if (s.Klasse.Equals("" + cbKlasse.SelectedValue))
                 {
                     listeSchueler.Add(s.Name + " " + s.Vorname);
                 }

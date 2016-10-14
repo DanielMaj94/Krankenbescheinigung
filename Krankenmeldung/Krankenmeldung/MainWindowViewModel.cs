@@ -26,6 +26,7 @@ namespace Krankenmeldung
         {
             AlleLehrerSpeichern();
             AlleKlassenSpeichern();
+            AlleSchuelerSpeichern();
         }
 
         public void AlleLehrerSpeichern()
