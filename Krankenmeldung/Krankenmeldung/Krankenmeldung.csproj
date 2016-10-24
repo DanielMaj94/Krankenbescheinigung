@@ -54,6 +54,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Dokument.cs" />
+    <Compile Include="DokumenteAnzeigen.xaml.cs">
+      <DependentUpon>DokumenteAnzeigen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Einstellungen.xaml.cs">
+      <DependentUpon>Einstellungen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoSchueler.xaml.cs">
+      <DependentUpon>InfoSchueler.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Krankenmelden.xaml.cs">
       <DependentUpon>Krankenmelden.xaml</DependentUpon>
     </Compile>
@@ -64,6 +73,21 @@
       <DependentUpon>LoginGUI.xaml</DependentUpon>
     </Compile>
     <Compile Include="Schueler.cs" />
+    <Compile Include="UploadDokument.xaml.cs">
+      <DependentUpon>UploadDokument.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DokumenteAnzeigen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Einstellungen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoSchueler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Krankenmelden.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +109,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UploadDokument.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainWindowViewModel.cs" />

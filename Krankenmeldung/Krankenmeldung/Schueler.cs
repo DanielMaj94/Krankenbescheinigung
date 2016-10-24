@@ -9,6 +9,7 @@ namespace Krankenmeldung
 {
     public class Schueler : INotifyPropertyChanged
     {
+        int id;
         string name;
         string vorname;
         int alter;
@@ -21,6 +22,16 @@ namespace Krankenmeldung
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
 
         public string Name
         {
@@ -112,8 +123,9 @@ namespace Krankenmeldung
             }
         }
 
-        public Schueler(string _name, string _vorname, int _alter, string _strasse, string _plz, string _ort, string _firma, string _email, string _klasse/*, string _status*/)
+        public Schueler(int _id, string _name, string _vorname, int _alter, string _strasse, string _plz, string _ort, string _firma, string _email, string _klasse/*, string _status*/)
         {
+            this.id = _id;
             this.name = _name;
             this.vorname = _vorname;
             this.alter = _alter;

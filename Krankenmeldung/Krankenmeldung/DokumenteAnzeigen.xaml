@@ -1,0 +1,23 @@
+﻿<Window x:Class="Krankenmeldung.DokumenteAnzeigen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DokumenteAnzeigen" Height="536" Width="737">
+    <Grid>
+        <ListView x:Name="lstData" ItemsSource="{Binding Path=AlleKrankenSchueler}"  IsEnabled="true" Background="White" Margin="10,52,10,51" SelectionChanged="lstData_SelectionChanged" FontSize="16">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Datei" Width="Auto" DisplayMemberBinding="{Binding Path=Dateiname}" />
+                    <GridViewColumn Header="ID" Width="Auto" DisplayMemberBinding="{Binding Path=Id}" />
+                    <GridViewColumn Header="Vorname" Width="Auto" DisplayMemberBinding="{Binding Path=Vorname}" />
+                    <GridViewColumn Header="Nachname" Width="Auto" DisplayMemberBinding="{Binding Path=Name}" />
+                    <GridViewColumn Header="Datum" Width="Auto" DisplayMemberBinding="{Binding Path=Datum}" />
+                    <GridViewColumn Header="Bemerkung" Width="Auto" DisplayMemberBinding="{Binding Path=Beschreibung}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Öffnen" HorizontalAlignment="Left" Margin="10,462,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" FontSize="16" Height="37"/>
+        <ComboBox Name="cbKlasse" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" Height="37" FontSize="16"/>
+        <ComboBox Name="cbDatum" HorizontalAlignment="Left" Margin="179,10,0,0" VerticalAlignment="Top" Width="154" SelectionChanged="cbDatum_SelectionChanged" Height="37" FontSize="16"/>
+        <Button Name="btnAkt" Content="Aktualisieren" HorizontalAlignment="Left" Margin="138,462,0,0" VerticalAlignment="Top" Width="131" Click="btnAkt_Click" FontSize="16" Height="37"/>
+    </Grid>
+</Window>

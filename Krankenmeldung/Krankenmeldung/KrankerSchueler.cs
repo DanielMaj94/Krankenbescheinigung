@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Krankmeldung;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace Krankenmeldung
 {
     public class KrankerSchueler : INotifyPropertyChanged
     {
+        int id;
         Schueler schueler;
         string datum;
         string uhrzeitVon;
@@ -16,6 +18,16 @@ namespace Krankenmeldung
         string status = "Anwesend";
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                NotifyPropertyChanged("Id");
+            }
+        }
 
         public Schueler Schueler
         {
@@ -67,8 +79,9 @@ namespace Krankenmeldung
             }
         }
 
-        public KrankerSchueler(Schueler _schueler, string _datum, string _uhrzeitVon, string _uhrzeitBis, string _status)
+        public KrankerSchueler(int _id, Schueler _schueler, string _datum, string _uhrzeitVon, string _uhrzeitBis, string _status)
         {
+            this.id = _id;
             this.schueler = _schueler;
             this.datum = _datum;
             this.uhrzeitVon = _uhrzeitVon;

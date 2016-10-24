@@ -1,0 +1,27 @@
+﻿<Window x:Class="Krankenmeldung.InfoSchueler"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Schüler Information" Height="395" Width="397.334">
+    <Grid>
+        <Label Content="Vorname" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Nachname" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Klasse" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Alter" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Strasse" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="PLZ" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Ort" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Firma" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="E-Mail" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox Name="vorname" HorizontalAlignment="Left" Height="29" Margin="132,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Vorname}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="nachname" HorizontalAlignment="Left" Height="29" Margin="132,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Name}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="klasse" HorizontalAlignment="Left" Height="29" Margin="132,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Klasse}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="alter" HorizontalAlignment="Left" Height="29" Margin="132,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Alter}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="strasse" HorizontalAlignment="Left" Height="29" Margin="132,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Strasse}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="plz" HorizontalAlignment="Left" Height="29" Margin="132,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Plz}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="ort" HorizontalAlignment="Left" Height="29" Margin="132,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Ort}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="firma" HorizontalAlignment="Left" Height="29" Margin="132,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Firma}" IsEnabled="False" FontSize="16"/>
+        <TextBox Name="email" HorizontalAlignment="Left" Height="29" Margin="132,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Text="{Binding Path=Email}" IsEnabled="False" FontSize="16"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="202,331,0,0" VerticalAlignment="Top" Width="177" Click="btnOK" FontSize="16"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="187" Click="btnEdit" FontSize="16"/>
+    </Grid>
+</Window>

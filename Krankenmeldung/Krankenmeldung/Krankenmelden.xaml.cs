@@ -23,6 +23,9 @@ namespace Krankenmeldung
         List<string> AlleKlassen = new List<string>();
         List<string> listeSchueler = new List<string>();
         List<string> listeStatus = new List<string>();
+        Schueler tempschueler = null;
+        KrankerSchueler SchulerKrank;
+
         MainWindowViewModel meinViewModel;
 
         public Krankenmelden(MainWindowViewModel ViewModel)
@@ -32,7 +35,7 @@ namespace Krankenmeldung
 
             foreach(Klasse k in meinViewModel.alleKlassen)
             {
-                MessageBox.Show(k.Bezeichnung);
+                //MessageBox.Show(k.Bezeichnung);
                 AlleKlassen.Add(k.Bezeichnung);
             }
 
@@ -47,24 +50,86 @@ namespace Krankenmeldung
 
         private void cbKlasse_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            cbSchueler.SelectedValue = "";
+            btnHochladen.IsEnabled = false;
             listeSchueler.Clear();
 
-            //MessageBox.Show(""+cbKlasse.SelectedValue);
-            foreach(Schueler s in meinViewModel.AlleSchueler)
+            //foreach (string s in meinViewModel.KlassenlehrerVon)
+            //{
+            //    //MessageBox.Show("" + s);
+            //    if (s.Equals(cbKlasse.SelectedValue))
+            //    {
+            //        //btnHochladen.IsEnabled = true;
+            //    }
+            //}
+
+            foreach(Schueler s in meinViewModel.alleSchueler)
             {
-                //MessageBox.Show(s.Klasse + " " /*cbSchueler.SelectedValue*/);
                 if (s.Klasse.Equals("" + cbKlasse.SelectedValue))
                 {
-                    listeSchueler.Add(s.Name + " " + s.Vorname);
+                    listeSchueler.Add(s.Id + ". " + s.Name + " " + s.Vorname);
                 }
             }
 
             cbSchueler.ItemsSource = listeSchueler;
+            cbKlasse.IsEnabled = false;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnKrankmelden_Click(object sender, RoutedEventArgs e)
         {
+            if(tempschueler.Equals(null))
+            {
+                MessageBox.Show("Bitte wählen sie einen Schüler aus");
+            }
+            else
+            {
+                MessageBox.Show("Ich bin jetzt hier");
+                SchulerKrank = new KrankerSchueler(meinViewModel.alleKrankenSchueler.Count, tempschueler, DateDatum.Text, tbuhrzeitVon.Text, tbuhrzeitBis.Text, "" + cbStatus.SelectedValue);
+                meinViewModel.AlleKrankenSchueler.Add(SchulerKrank);
+            }
+            Close();
+        }
 
+        private void cbSchueler_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //MessageBox.Show("" + cbSchueler.SelectedValue);
+            string[] temp = cbSchueler.SelectedValue.ToString().Split('.');
+
+            foreach(Schueler s in meinViewModel.alleSchueler)
+            {
+                if(Int32.Parse(temp[0]) == s.Id)
+                {
+                    tempschueler = s;
+                    btnSchülerinfo.IsEnabled = true;
+                    btnHochladen.IsEnabled = true;
+                    btnKrankmelden.IsEnabled = true;
+                    DateDatum.IsEnabled = true;
+                    tbuhrzeitBis.IsEnabled = true;
+                    tbuhrzeitVon.IsEnabled = true;
+                    cbStatus.IsEnabled = true;
+                }
+            }
+        }
+
+        private void btnSchülerinfo_Click(object sender, RoutedEventArgs e)
+        {
+            InfoSchueler info = new InfoSchueler(meinViewModel, tempschueler);
+            info.Show();
+        }
+
+        private void btnHochladen_Click(object sender, RoutedEventArgs e)
+        {
+            if (tempschueler.Equals(null))
+            {
+                MessageBox.Show("Bitte wählen sie einen Schüler aus");
+            }
+            else
+            {
+                MessageBox.Show("Ich bin jetzt hier");
+                SchulerKrank = new KrankerSchueler(meinViewModel.alleKrankenSchueler.Count, tempschueler, DateDatum.Text, tbuhrzeitVon.Text, tbuhrzeitBis.Text, "" + cbStatus.SelectedValue);
+                UploadDokument up = new UploadDokument(meinViewModel, SchulerKrank);
+                up.Show();
+            }
         }
 
         

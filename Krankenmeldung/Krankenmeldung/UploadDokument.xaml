@@ -1,0 +1,14 @@
+﻿<Window x:Class="Krankenmeldung.UploadDokument"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UploadDokument" Height="426" Width="409">
+    <Grid>
+        <Label Content="Titel:" Margin="10,8,247,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox Name="tbTitel" Height="23" Margin="60,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
+        <Button Name="btnUpload" Content="Datei auswählen" Margin="10,55,10,0" VerticalAlignment="Top" Height="25" Click="btnUpload_Click" FontSize="16"/>
+        <TextBox Name="tbBemerkung" Margin="10,101,10,49" TextWrapping="Wrap"/>
+        <Button Name="btnhochladen" Content="Hochladen" HorizontalAlignment="Left" Margin="10,0,0,10" Width="98" Click="btnhochladen_Click" Height="27" VerticalAlignment="Bottom" FontSize="16" />
+        <Button Name="btnAbbrechen" Content="Abbrechen" HorizontalAlignment="Left" Margin="113,0,0,10" Width="121" Click="btnAbbrechen_Click" Height="27" VerticalAlignment="Bottom" FontSize="16"/>
+
+    </Grid>
+</Window>

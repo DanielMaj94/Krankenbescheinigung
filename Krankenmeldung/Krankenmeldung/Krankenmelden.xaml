@@ -1,21 +1,28 @@
 ﻿<Window x:Class="Krankenmeldung.Krankenmelden"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Krankenmelden" Height="300" Width="300">
-    <Grid>
-        <ComboBox Name="cbKlasse" HorizontalAlignment="Left" Margin="151,22,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=AlleKlassen}" SelectionChanged="cbKlasse_SelectionChanged"/>
-        <ComboBox x:Name="cbSchueler" HorizontalAlignment="Left" Margin="151,61,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path=listeSchueler}" SelectionChanged="cbKlasse_SelectionChanged"/>
-        <DatePicker HorizontalAlignment="Left" Margin="151,99,0,0" VerticalAlignment="Top"/>
-        <Label Content="Klasse:" HorizontalAlignment="Left" Margin="19,22,0,0" VerticalAlignment="Top"/>
-        <Label Content="Schüler:" HorizontalAlignment="Left" Margin="19,59,0,0" VerticalAlignment="Top"/>
-        <Label Content="Datum:" HorizontalAlignment="Left" Margin="19,98,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="tbuhrzeitVon" HorizontalAlignment="Left" Height="23" Margin="151,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="tbuhrzeitBis" HorizontalAlignment="Left" Height="23" Margin="152,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Uhrzeit Bis:" HorizontalAlignment="Left" Margin="19,179,0,0" VerticalAlignment="Top"/>
-        <Label Content="Uhrzeit Von:" HorizontalAlignment="Left" Margin="19,142,0,0" VerticalAlignment="Top"/>
-        <Button Content="Krankmelden
-                " HorizontalAlignment="Left" Margin="19,243,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <ComboBox x:Name="cbStatus" HorizontalAlignment="Left" Margin="151,216,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding AlleStatus}" SelectionChanged="cbKlasse_SelectionChanged"/>
-        <Label Content="Status:" HorizontalAlignment="Left" Margin="19,214,0,0" VerticalAlignment="Top"/>
+        Title="Krankenmelden" Height="421" Width="385">
+    <Grid Margin="0,0,2,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="234*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox Name="cbKlasse" Margin="3,0,0,339" ItemsSource="{Binding Path=AlleKlassen}" SelectionChanged="cbKlasse_SelectionChanged" Height="29" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Hier können sie die Klasse auswählen" Cursor="Hand"/>
+        <ComboBox x:Name="cbSchueler" Margin="3,0,0,295" ItemsSource="{Binding Path=listeSchueler}" SelectionChanged="cbSchueler_SelectionChanged" Height="29" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Hier können sie einen Schüler der Klasse auswählen" Cursor="Hand"/>
+        <DatePicker Name="DateDatum" Margin="2,0,0,246" Height="28" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Wählen Sie das Datum aus" Cursor="Hand" IsEnabled="False"/>
+        <Label Content="Klasse:" HorizontalAlignment="Left" Margin="18,22,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="60"/>
+        <Label Content="Schüler:" HorizontalAlignment="Left" Margin="18,66,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="68"/>
+        <Label Content="Datum:" HorizontalAlignment="Left" Margin="19,115,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="63"/>
+        <TextBox  Name="tbuhrzeitVon" Margin="2,0,0,199" TextWrapping="Wrap" Text="08:00" Height="29" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Geben sie Hier ein, ab welcher Uhrzeit der Schüler fehlt" IsEnabled="False" />
+        <TextBox Name="tbuhrzeitBis" Margin="1,0,0,152" TextWrapping="Wrap" Text="16:00" Height="29" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Geben sie hier ein, wie lange der Schüler fehlen wird" IsEnabled="False"/>
+        <Label Content="Uhrzeit Bis:" HorizontalAlignment="Left" Margin="19,209,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="91"/>
+        <Label Content="Uhrzeit Von:" HorizontalAlignment="Left" Margin="19,162,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="98"/>
+        <Button Content="Krankmelden" Name="btnKrankmelden" HorizontalAlignment="Left" Margin="19,343,0,0" VerticalAlignment="Top" Width="106" Click="btnKrankmelden_Click" FontSize="16" Height="26" ToolTip="Hier können Sie den Schüler Krankmelden" Cursor="Hand" IsEnabled="False"/>
+        <ComboBox x:Name="cbStatus" Margin="1,0,0,107" ItemsSource="{Binding AlleStatus}" Height="29" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Geben sie hier den Status ein" Cursor="Hand" IsEnabled="False"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="18,254,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="60"/>
+        <Button Name="btnSchülerinfo" Content="Schülerinfo" Margin="0,0,0,21" Click="btnSchülerinfo_Click" Height="26" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Hier können sie die Informationen des Schülers ausgeben und bearbeiten" Cursor="Help" IsEnabled="False"/>
+        <Label Content="Dokument:" HorizontalAlignment="Left" Margin="19,296,0,0" VerticalAlignment="Top" FontSize="16" Height="29" Width="88"/>
+        <Button Name="btnHochladen" Content="Hochladen" Margin="0,0,0,65" IsEnabled="False" Click="btnHochladen_Click" Height="27" VerticalAlignment="Bottom" FontSize="16" Grid.Column="1" ToolTip="Hier können sie ein Dokument hochladen"/>
     </Grid>
 </Window>
